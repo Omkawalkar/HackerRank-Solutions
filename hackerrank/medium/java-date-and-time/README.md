@@ -1,4 +1,4 @@
-# Java Int to String
+# Java Date and Time
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -50,13 +50,32 @@ A single line of input containing the space separated month, day and year, respe
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-21T23:26:26.932Z  
+**Submitted:** 2026-07-21T23:29:22.942Z  
 
 ```java
 
-  
-   //Write your code he
-   String s = Integer.toString(n);
+
+class Result {
+
+    /*
+     * Complete the 'findDay' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts following parameters:
+     *  1. INTEGER month
+     *  2. INTEGER day
+     *  3. INTEGER year
+     */
+
+   
+public static String findDay(int month, int day, int year) {
+        Calendar c = new GregorianCalendar(year, month-1, day);
+        return c.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()).toUpperCase();
+}
+    }
+
+
+
 
 ```
 
