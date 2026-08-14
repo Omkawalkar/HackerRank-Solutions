@@ -46,7 +46,7 @@ Print the answer to this problem on a single line.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T10:18:58.231Z  
+**Submitted:** 2026-08-14T10:20:13.778Z  
 
 ```java
 import java.io.*;
