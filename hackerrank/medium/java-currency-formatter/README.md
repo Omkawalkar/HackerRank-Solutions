@@ -35,7 +35,7 @@ On the fourth line, print `France: f`, where $f$ is $payment$ formatted for Fren
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T10:10:21.934Z  
+**Submitted:** 2026-08-14T10:11:03.214Z  
 
 ```java
 import java.io.*;
