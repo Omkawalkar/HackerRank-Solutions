@@ -1,4 +1,4 @@
-# Java Stdin and Stdout I
+# Java Anagrams
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -37,24 +37,44 @@ The second line contains a string $b$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-25T03:16:22.557Z  
+**Submitted:** 2026-09-25T03:49:29.293Z  
 
 ```java
-import java.util.*;
 
-public class Solution {
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
+    static boolean isAnagram(String a, String b) {
+           // If lengths are different, they cannot be anagrams
+        if (a.length() != b.length()) {
+            return false;
+        }
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+        // Convert both strings to lowercase
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+
+        // Frequency array for 26 English letters
+        int[] frequency = new int[26];
+
+        // Count characters in first string
+        for (int i = 0; i < a.length(); i++) {
+            frequency[a.charAt(i) - 'a']++;
+        }
+
+        // Remove characters using second string
+        for (int i = 0; i < b.length(); i++) {
+            frequency[b.charAt(i) - 'a']--;
+        }
+
+        // Check if all frequencies are zero
+        for (int i = 0; i < frequency.length; i++) {
+            if (frequency[i] != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
-}
+
 
 ```
 
