@@ -26,7 +26,7 @@ On the first line, print an integer, $n$, denoting the number of tokens in strin
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T04:23:02.440Z  
+**Submitted:** 2026-09-28T04:24:39.005Z  
 
 ```java
 import java.io.*;
