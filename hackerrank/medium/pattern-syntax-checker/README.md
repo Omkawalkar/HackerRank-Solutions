@@ -1,4 +1,4 @@
-# Java String Tokens
+# Pattern Syntax Checker
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -27,35 +27,38 @@ For each test case, print ``Valid`` if the syntax of the given pattern is correc
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T04:24:42.548Z  
+**Submitted:** 2026-09-28T07:06:06.463Z  
 
 ```java
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
+import java.util.regex.*;
 
-public class Solution {
+public class Solution
+{
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		int testCases = Integer.parseInt(in.nextLine());
+		while(testCases>0){
+			String pattern = in.nextLine();
+          	//Write your code
+            
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+            try {
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            } 
+            catch (PatternSyntaxException e) {
+                System.out.println("Invalid");
+            }
 
-        String s = scan.nextLine().trim();
-
-        if (s.isEmpty()) {
-            System.out.println(0);
-            return;
+            testCases--;
         }
 
-        String[] word = s.split("[ !,?._'@]+");
+        in.close();
+		}
+	}
 
-        System.out.println(word.length);
 
-        for (int i = 0; i < word.length; i++) {
-            System.out.println(word[i]);
-        }
-
-        scan.close();
-    }
-}
 
 
 ```
