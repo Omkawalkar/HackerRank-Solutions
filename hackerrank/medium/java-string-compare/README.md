@@ -44,7 +44,7 @@ The second line contains an integer denoting $k$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T06:14:44.803Z  
+**Submitted:** 2026-09-30T06:14:58.079Z  
 
 ```java
 
